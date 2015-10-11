@@ -5,12 +5,12 @@
 <% else %>
 
 <h1>Results for "<%= @search_term %>" :</h1>
-
-<table border="1">
+<div class = "CSSTableGenerator">
+<table>
   <tr>
-    <th>Image</th>
-    <th>Title</th>
-    <th>Social Rank</th>
+    <td>Image</td>
+    <td>Title</td>
+    <td>Social Rank</td>
   </tr>
   <% @recipes.each do |recipe| %>
     <tr class=<%= cycle('even','odd')%>>
@@ -22,5 +22,6 @@
 </table>
 
 <% end %>
+</div>
 <p>Powered By Food2Fork.com</p>
 
